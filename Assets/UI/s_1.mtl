@@ -1,0 +1,9 @@
+newmtl s:s_Material_u1_v1
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd s_u1_v1.png
+Ni 1.00
+Ks 0.30 0.30 0.30
+Ns 0.00
