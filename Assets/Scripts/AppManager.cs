@@ -567,10 +567,11 @@ public class ARItems : IEquatable<ARItems>
     public int optionprice = 0;
     public string instructions = "";
     public string description = "";
+    public string category;
 
     //public string[] Labels;
     //public Options[] mOptions;
-    public ARItems(string name = "", string price = "", int jain = 0, int quantity = 0, string instructions = "",string description="",string customisation="",int optionprice=0,bool has=false)
+    public ARItems(string name = "", string price = "", int jain = 0, int quantity = 0, string instructions = "",string description="",string customisation="",int optionprice=0,bool has=false,string category)
     {
         this.name = name;
         this.price = price;
@@ -581,6 +582,7 @@ public class ARItems : IEquatable<ARItems>
         this.customisation = customisation;
         this.optionprice = optionprice;
         this.hasCustomisation = has;
+        this.category = category;
     }
 
     public bool Equals(ARItems aritem)
