@@ -571,7 +571,7 @@ public class ARItems : IEquatable<ARItems>
 
     //public string[] Labels;
     //public Options[] mOptions;
-    public ARItems(string name = "", string price = "", int jain = 0, int quantity = 0, string instructions = "",string description="",string customisation="",int optionprice=0,bool has=false,string category)
+    public ARItems(string name = "", string price = "", int jain = 0, int quantity = 0, string instructions = "",string description="",string customisation="",int optionprice=0,bool has=false,string category="")
     {
         this.name = name;
         this.price = price;
