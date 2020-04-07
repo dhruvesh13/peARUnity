@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ARMainScreen_3.unity
     guid: 59786cd064211c74498eb41a017e86cf
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Scene2.unity
     guid: f0dda76dd9e57ad4287d4e780c0333c9
   m_configObjects: {}
