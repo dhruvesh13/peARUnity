@@ -535,8 +535,8 @@ public class ARLoader : MonoBehaviour, ITrackableEventHandler
 
                     }
                     mButtonInstance[i] = Instantiate(mContentPrefab, mContent.transform, false);
-                    mButtonInstance[i].GetComponentInChildren<Text>().text = bundle.LoadAsset(bundle.GetAllAssetNames()[i]).name;
-                   // mButtonInstance[i].GetComponentInChildren<Text>().text = sn.Restaurants[restaurant_id].Categories[category_id].Items[i].Name;
+                    mButtonInstance[i].GetComponentInChildren<Text>().text = items[i].Name;
+                    // mButtonInstance[i].GetComponentInChildren<Text>().text = sn.Restaurants[restaurant_id].Categories[category_id].Items[i].Name;
                     //   Debug.Log("Name"+ sn.Restaurants[restaurant_id].Categories[category_id].Items[i].Name.ToUpper());
                     mButtonInstance[i].GetComponent<Button>().onClick.AddListener(delegate
                     {
@@ -694,8 +694,8 @@ public class ARLoader : MonoBehaviour, ITrackableEventHandler
 
                     }
                     mButtonInstance[i] = Instantiate(mContentPrefab, mContent.transform, false);
-                    mButtonInstance[i].GetComponentInChildren<Text>().text = bundle.LoadAsset(bundle.GetAllAssetNames()[i]).name;
-                   // mButtonInstance[i].GetComponentInChildren<Text>().text = sn.Restaurants[restaurant_id].Categories[category_id].Items[i].Name;
+                    mButtonInstance[i].GetComponentInChildren<Text>().text = items[i].Name;
+                    // mButtonInstance[i].GetComponentInChildren<Text>().text = sn.Restaurants[restaurant_id].Categories[category_id].Items[i].Name;
                     //   Debug.Log("Name"+ sn.Restaurants[restaurant_id].Categories[category_id].Items[i].Name.ToUpper());
                     mButtonInstance[i].GetComponent<Button>().onClick.AddListener(delegate
                     {

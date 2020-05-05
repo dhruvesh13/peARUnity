@@ -62,7 +62,7 @@ public class ModelLoader : MonoBehaviour
     void Start()
     {
         Debug.Log("mAttached during start: " + mAttached);
-        Screen.orientation = ScreenOrientation.LandscapeLeft;
+        Screen.orientation = ScreenOrientation.Portrait;
 
         mExpandedView = GameObject.Find("ExpandedView");
         mContent = GameObject.Find("ListContent");
@@ -141,7 +141,11 @@ public class ModelLoader : MonoBehaviour
 
 
         //AssetBundle Fetching & Caching
-        StartCoroutine(DownloadAndCache());
+        if (flag == 0)
+        {
+            StartCoroutine(DownloadAndCache());
+        }
+       
 
       
 
@@ -251,7 +255,7 @@ public class ModelLoader : MonoBehaviour
 
 
             //AssetBundle Fetching & Caching
-            StartCoroutine(DownloadAndCache());
+          //  StartCoroutine(DownloadAndCache());
 
           
 
@@ -471,7 +475,7 @@ public class ModelLoader : MonoBehaviour
 
                     }
                     mButtonInstance[i] = Instantiate(mContentPrefab, mContent.transform, false);
-                    mButtonInstance[i].GetComponentInChildren<Text>().text = bundle.LoadAsset(bundle.GetAllAssetNames()[i]).name;
+                    mButtonInstance[i].GetComponentInChildren<Text>().text = items[i].Name;
                     // mButtonInstance[i].GetComponentInChildren<Text>().text = sn.Restaurants[restaurant_id].Categories[category_id].Items[i].Name;
                     //   Debug.Log("Name"+ sn.Restaurants[restaurant_id].Categories[category_id].Items[i].Name.ToUpper());
                     mButtonInstance[i].GetComponent<Button>().onClick.AddListener(delegate
@@ -634,7 +638,7 @@ public class ModelLoader : MonoBehaviour
 
                     }
                     mButtonInstance[i] = Instantiate(mContentPrefab, mContent.transform, false);
-                    mButtonInstance[i].GetComponentInChildren<Text>().text = bundle.LoadAsset(bundle.GetAllAssetNames()[i]).name;
+                    mButtonInstance[i].GetComponentInChildren<Text>().text =items[i].Name;
                     // mButtonInstance[i].GetComponentInChildren<Text>().text = sn.Restaurants[restaurant_id].Categories[category_id].Items[i].Name;
                     //   Debug.Log("Name"+ sn.Restaurants[restaurant_id].Categories[category_id].Items[i].Name.ToUpper());
                     mButtonInstance[i].GetComponent<Button>().onClick.AddListener(delegate
@@ -713,9 +717,9 @@ public class ModelLoader : MonoBehaviour
 
         Debug.Log("Inside attach");
         mBundleInstance.transform.SetParent(transform,true);
-        mBundleInstance.transform.localRotation = Quaternion.Euler(-120f, 0, 0);
+        mBundleInstance.transform.localRotation = Quaternion.Euler(-130f, 0, 0);
         mBundleInstance.transform.localPosition = new Vector3(0.0f, 0.0f, 20.0f);
-        mBundleInstance.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+        mBundleInstance.transform.localScale = new Vector3(0.7f, 0.7f, 0.7f);
         mBundleInstance.AddComponent<touchEvents>();
         mBundleInstance.transform.gameObject.SetActive(true);
 
